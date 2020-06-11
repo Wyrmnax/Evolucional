@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+
+	<legend>
+
+		@if (Session["Username"] != null)
+		{
+			<text>
+
+				Bem Vindo! @Session["Username"].ToString()
+
+			</text>
+			<br />
+			if (Session["Processado"] != null)
+			{
+				<text>
+
+					Processamento Concluido
+
+				</text>
+			}
+				<br />
+				<input type="submit" value="Botao 1" id="button1id" class="btn btn-default" onclick="location.href='@Url.Action("Botao1Click")'" />
+
+				<br />
+				<input type="submit" value="Botao 2" id="button2id" class="btn btn-default" onclick="location.href='@Url.Action("Botao2Click")'" />
+
+			}
+		</legend>
+</fieldset>
+
